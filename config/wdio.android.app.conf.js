@@ -5,6 +5,8 @@ const { config } = require('./wdio.shared.conf');
 // Specs
 // ============
 config.cucumberOpts.require = ['./tests/steps/**/app*.steps.js'];
+config.cucumberOpts.tagExpression='@demo'
+
 
 // ============
 // Capabilities
@@ -22,7 +24,7 @@ config.capabilities = [
         'appium:chromedriverExecutableDir':
             '<PATH TO CHROME DRIVER>',
         'appium:deviceName': 'emulator-5554',
-        'appium:platformVersion': '8.0',
+        'appium:platformVersion': '9.0',
         'appium:orientation': 'PORTRAIT',
         // `automationName` will be mandatory, see
         // https://github.com/appium/appium/releases/tag/v1.13.0
@@ -30,7 +32,7 @@ config.capabilities = [
         // The path to the app
         'appium:app': join(
             process.cwd(),
-            './apps/Android-NativeDemoApp-0.2.1.apk',
+            './apps/app-sdk-release.apk',
         ),
         // Read the reset strategies very well, they differ per platform, see
         // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
@@ -39,7 +41,9 @@ config.capabilities = [
         'appium:fullReset': false,
         'appium:dontStopAppOnReset': true,
         'appium:newCommandTimeout': 60,
-    },
+        'appium:appPackage': 'io.mimi.sdk_app.snapshot',
+        'appium:appActivity': 'io.mimi.sdk_app.LauncherActivity'
+        },
 ];
 
 exports.config = config;

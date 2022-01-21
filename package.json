@@ -12,11 +12,13 @@
     "android.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.android.rdc.app.conf.js",
     "android.app": "./node_modules/.bin/wdio ./config/wdio.android.app.conf.js",
     "ios.app": "./node_modules/.bin/wdio ./config/wdio.ios.app.conf.js",
-    "ios.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.ios.rdc.app.conf.js"
+    "ios.sauce.rdc.app": "./node_modules/.bin/wdio ./config/saucelabs/wdio.ios.rdc.app.conf.js",
+    "clean:report": "rm -rf reports",
+    "clean:logs": "rm -rf test-report/output"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Schveitzer/webdriverio-appium-cucumber-boilerplate.git"
+    "url": "https://github.com/sree030289/webdriverio-appium-cucumber-boilerplate"
   },
   "dependencies": {
     "@babel/cli": "^7.7.0",

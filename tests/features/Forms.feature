@@ -3,6 +3,7 @@ Feature: Form validations
   Background:
     Given I'm on the forms screen
 
+@demo
   Scenario: Type in the text field
     When I type 'Text for the type test' in the text box
     Then the text that was typed is displayed
